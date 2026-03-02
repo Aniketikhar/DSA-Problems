@@ -1,3 +1,9 @@
+
+#include <iostream>
+#include <vector>
+#include<algorithm>
+using namespace std;
+
 vector<vector<int>> threeSum(vector<int>& nums) {
         vector<vector<int>> ans;
         int size = nums.size();
@@ -17,7 +23,23 @@ vector<vector<int>> threeSum(vector<int>& nums) {
                 }
             }
         }
+        
+        for(int h = 0; h < ans.size(); h++){
+            for(int g = 0; g < ans[h].size(); g++){
+                cout << ans[h][g] << " ";
+            }
+            cout <<endl;
+        }
 
         return ans;
+}
 
-    }
+
+
+int main() {
+    vector<int> nums = {-1,0,1,2,-1,-4};
+    
+    threeSum(nums);
+
+    return 0;
+}
